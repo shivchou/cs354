@@ -1,0 +1,244 @@
+Script started on 2024-10-16 17:02:10-05:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="178" LINES="50"]
+[?2004h[shivani@vm-instunix-09] (1)$ [7mgdb test101[27mgdb test101
+[?2004l[35;1mGNU gdb (Ubuntu 12.1-0ubuntu1~22.04.2) 12.1[m
+Copyright (C) 2022 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32mtest101[m...
+[?2004h(gdb) list
+[?2004l1	[36m// a simple 8 byte allocation[m
+2	[01;34m#include[m [31m<assert.h>[m
+3	[01;34m#include[m [31m<stdlib.h>[m
+4	[01;34m#include[m [31m"p3Heap.h"[m
+5	
+6	[32mint[m [01mmain[m[31m()[m [31m{[m
+7	    [01massert[m[31m([m[01minit_heap[m[31m([m[35m4096[m[31m)[m [31m==[m [35m0[m[31m);[m
+8	    [32mvoid[m[31m*[m ptr [31m=[m [01malloc[m[31m([m[35m8[m[31m);[m
+9	    [01massert[m[31m([mptr [31m!=[m NULL[31m);[m
+10	    [01mexit[m[31m([m[35m0[m[31m);[m
+[?2004h(gdb)  main[K[K[K[K[Kb main
+[?2004lBreakpoint 1 at [34m0x11fe[m: file [32mtest101.c[m, line 7.
+[?2004h(gdb) r
+[?2004lStarting program: [32m/home/shivani/private/cs354/p3/tests/test101[m 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "[32m/lib/x86_64-linux-gnu/libthread_db.so.1[m".
+
+Breakpoint 1, [33mmain[m () at [32mtest101.c[m:7
+7	    [01massert[m[31m([m[01minit_heap[m[31m([m[35m4096[m[31m)[m [31m==[m [35m0[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) next
+[?2004l8	    [32mvoid[m[31m*[m ptr [31m=[m [01malloc[m[31m([m[35m8[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) print[K[K[K[K[Kbreak 9
+[?2004lBreakpoint 2 at [34m0x5655623e[m: file [32mtest101.c[m, line 9.
+[?2004h(gdb) exit
+[?2004l[?2004hA debugging session is active.
+
+	Inferior 1 [process 2109118] will be killed.
+
+Quit anyway? (y or n) y
+[?2004l[?2004h[shivani@vm-instunix-09] (2)$ rm typescript 
+[?2004lrm: remove regular empty file 'typescript'? yes
+[?2004h[shivani@vm-instunix-09] (3)$ script
+[?2004lScript started, output log file is 'typescript'.
+[?2004h[shivani@vm-instunix-09] (1)$ [7mgdb test101[27mgdb test101
+[?2004l[35;1mGNU gdb (Ubuntu 12.1-0ubuntu1~22.04.2) 12.1[m
+Copyright (C) 2022 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32mtest101[m...
+[?2004h(gdb) list
+[?2004l1	[36m// a simple 8 byte allocation[m
+2	[01;34m#include[m [31m<assert.h>[m
+3	[01;34m#include[m [31m<stdlib.h>[m
+4	[01;34m#include[m [31m"p3Heap.h"[m
+5	
+6	[32mint[m [01mmain[m[31m()[m [31m{[m
+7	    [01massert[m[31m([m[01minit_heap[m[31m([m[35m4096[m[31m)[m [31m==[m [35m0[m[31m);[m
+8	    [32mvoid[m[31m*[m ptr [31m=[m [01malloc[m[31m([m[35m8[m[31m);[m
+9	    [01massert[m[31m([mptr [31m!=[m NULL[31m);[m
+10	    [01mexit[m[31m([m[35m0[m[31m);[m
+[?2004h(gdb) break main
+[?2004lBreakpoint 1 at [34m0x11fe[m: file [32mtest101.c[m, line 7.
+[?2004h(gdb) break 9
+[?2004lBreakpoint 2 at [34m0x123e[m: file [32mtest101.c[m, line 9.
+[?2004h(gdb) run
+[?2004lStarting program: [32m/home/shivani/private/cs354/p3/tests/test101[m 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "[32m/lib/x86_64-linux-gnu/libthread_db.so.1[m".
+
+Breakpoint 1, [33mmain[m () at [32mtest101.c[m:7
+7	    [01massert[m[31m([m[01minit_heap[m[31m([m[35m4096[m[31m)[m [31m==[m [35m0[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) next
+[?2004l8	    [32mvoid[m[31m*[m ptr [31m=[m [01malloc[m[31m([m[35m8[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) tep[K[K[Kstep
+[?2004l[33malloc[m ([36msize[m=8) at [32mp3Heap.c[m:150
+150	    [01;34mif[m[31m([msize [31m<[m [35m1[m[31m)[m
+[?2004h[?2004l[?2004h(gdb) list
+[?2004l145	[36m */[m
+146	[32mvoid[m[31m*[m [01malloc[m[31m([m[32mint[m size[31m)[m 
+147	[31m{[m
+148	
+149		[36m//check for invalid size     [m
+150	    [01;34mif[m[31m([msize [31m<[m [35m1[m[31m)[m
+151		[31m{[m
+152			[01;34mreturn[m NULL[31m;[m
+153		[31m}[m
+154		
+[?2004h(gdb) print size
+[?2004l$1 = 8
+[?2004h(gdb) [7mprint sizeof(blockHeader)[27m[C[C[C[C[C[Cprint sizeof(blockHeader)
+[?2004l$2 = 4
+[?2004h(gdb) [7mprint heap_start->size_status[27m[C[C[C[C[C[Cprint heap_start->size_status
+[?2004l$3 = 4090
+[?2004h(gdb) [7mprint heap_start[27m[7m\[27m[C[C[C[C[C[C[1Pprint heap_start
+[?2004l$4 = (blockHeader *[36m[m) [34m0xf7fb8004[m
+[?2004h(gdb) [7mprint heap_start+sizeof(blockHeader)[27m[C[C[C[C[C[Cprint heap_start+sizeof(blockHeader)
+[?2004l$5 = (blockHeader *[36m[m) [34m0xf7fb8014[m
+[?2004h(gdb) [7mprint (void *) heap_start + sizeof(blockHeader)[27m[C[C[C[C[C[Cprint (void *) heap_start + sizeof(blockHeader)
+[?2004l$6 = (void *[36m[m) [34m0xf7fb8008[m
+[?2004h(gdb) [7mcontinue[27m[C[C[C[C[C[Ccontinue
+[?2004lContinuing.
+
+Breakpoint 2, [33mmain[m () at [32mtest101.c[m:9
+9	    [01massert[m[31m([mptr [31m!=[m NULL[31m);[m
+[?2004h[?2004l[?2004h(gdb) [7mprint ptr[27m[C[C[C[C[C[Cprint ptr
+[?2004l$7 = (void *[36m[m) [34m0xf7fb8008[m
+[?2004h(gdb) list
+[?2004l4	[01;34m#include[m [31m"p3Heap.h"[m
+5	
+6	[32mint[m [01mmain[m[31m()[m [31m{[m
+7	    [01massert[m[31m([m[01minit_heap[m[31m([m[35m4096[m[31m)[m [31m==[m [35m0[m[31m);[m
+8	    [32mvoid[m[31m*[m ptr [31m=[m [01malloc[m[31m([m[35m8[m[31m);[m
+9	    [01massert[m[31m([mptr [31m!=[m NULL[31m);[m
+10	    [01mexit[m[31m([m[35m0[m[31m);[m
+11	[31m}[m
+[?2004h(gdb) next
+[?2004l10	    [01mexit[m[31m([m[35m0[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) quit
+[?2004l[?2004hA debugging session is active.
+
+	Inferior 1 [process 2109622] will be killed.
+
+Quit anyway? (y or n) y
+[?2004l[?2004h[shivani@vm-instunix-09] (2)$ exit
+[?2004lexit
+Script done.
+[?2004h[shivani@vm-instunix-09] (4)$ mv typescript [7mtypescript07gdb[27mtypescript07gdb
+[?2004l[?2004h[shivani@vm-instunix-09] (5)$ cat typescript07gdb 
+[?2004lScript started on 2024-10-16 17:04:45-05:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="178" LINES="50"]
+[?2004h[shivani@vm-instunix-09] (1)$ [7mgdb test101[27mgdb test101
+[?2004l[35;1mGNU gdb (Ubuntu 12.1-0ubuntu1~22.04.2) 12.1[m
+Copyright (C) 2022 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32mtest101[m...
+[?2004h(gdb) list
+[?2004l1	[36m// a simple 8 byte allocation[m
+2	[01;34m#include[m [31m<assert.h>[m
+3	[01;34m#include[m [31m<stdlib.h>[m
+4	[01;34m#include[m [31m"p3Heap.h"[m
+5	
+6	[32mint[m [01mmain[m[31m()[m [31m{[m
+7	    [01massert[m[31m([m[01minit_heap[m[31m([m[35m4096[m[31m)[m [31m==[m [35m0[m[31m);[m
+8	    [32mvoid[m[31m*[m ptr [31m=[m [01malloc[m[31m([m[35m8[m[31m);[m
+9	    [01massert[m[31m([mptr [31m!=[m NULL[31m);[m
+10	    [01mexit[m[31m([m[35m0[m[31m);[m
+[?2004h(gdb) break main
+[?2004lBreakpoint 1 at [34m0x11fe[m: file [32mtest101.c[m, line 7.
+[?2004h(gdb) break 9
+[?2004lBreakpoint 2 at [34m0x123e[m: file [32mtest101.c[m, line 9.
+[?2004h(gdb) run
+[?2004lStarting program: [32m/home/shivani/private/cs354/p3/tests/test101[m 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "[32m/lib/x86_64-linux-gnu/libthread_db.so.1[m".
+
+Breakpoint 1, [33mmain[m () at [32mtest101.c[m:7
+7	    [01massert[m[31m([m[01minit_heap[m[31m([m[35m4096[m[31m)[m [31m==[m [35m0[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) next
+[?2004l8	    [32mvoid[m[31m*[m ptr [31m=[m [01malloc[m[31m([m[35m8[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) tep[K[K[Kstep
+[?2004l[33malloc[m ([36msize[m=8) at [32mp3Heap.c[m:150
+150	    [01;34mif[m[31m([msize [31m<[m [35m1[m[31m)[m
+[?2004h[?2004l[?2004h(gdb) list
+[?2004l145	[36m */[m
+146	[32mvoid[m[31m*[m [01malloc[m[31m([m[32mint[m size[31m)[m 
+147	[31m{[m
+148	
+149		[36m//check for invalid size     [m
+150	    [01;34mif[m[31m([msize [31m<[m [35m1[m[31m)[m
+151		[31m{[m
+152			[01;34mreturn[m NULL[31m;[m
+153		[31m}[m
+154		
+[?2004h(gdb) print size
+[?2004l$1 = 8
+[?2004h(gdb) [7mprint sizeof(blockHeader)[27m[C[C[C[C[C[Cprint sizeof(blockHeader)
+[?2004l$2 = 4
+[?2004h(gdb) [7mprint heap_start->size_status[27m[C[C[C[C[C[Cprint heap_start->size_status
+[?2004l$3 = 4090
+[?2004h(gdb) [7mprint heap_start[27m[7m\[27m[C[C[C[C[C[C[1Pprint heap_start
+[?2004l$4 = (blockHeader *[36m[m) [34m0xf7fb8004[m
+[?2004h(gdb) [7mprint heap_start+sizeof(blockHeader)[27m[C[C[C[C[C[Cprint heap_start+sizeof(blockHeader)
+[?2004l$5 = (blockHeader *[36m[m) [34m0xf7fb8014[m
+[?2004h(gdb) [7mprint (void *) heap_start + sizeof(blockHeader)[27m[C[C[C[C[C[Cprint (void *) heap_start + sizeof(blockHeader)
+[?2004l$6 = (void *[36m[m) [34m0xf7fb8008[m
+[?2004h(gdb) [7mcontinue[27m[C[C[C[C[C[Ccontinue
+[?2004lContinuing.
+
+Breakpoint 2, [33mmain[m () at [32mtest101.c[m:9
+9	    [01massert[m[31m([mptr [31m!=[m NULL[31m);[m
+[?2004h[?2004l[?2004h(gdb) [7mprint ptr[27m[C[C[C[C[C[Cprint ptr
+[?2004l$7 = (void *[36m[m) [34m0xf7fb8008[m
+[?2004h(gdb) list
+[?2004l4	[01;34m#include[m [31m"p3Heap.h"[m
+5	
+6	[32mint[m [01mmain[m[31m()[m [31m{[m
+7	    [01massert[m[31m([m[01minit_heap[m[31m([m[35m4096[m[31m)[m [31m==[m [35m0[m[31m);[m
+8	    [32mvoid[m[31m*[m ptr [31m=[m [01malloc[m[31m([m[35m8[m[31m);[m
+9	    [01massert[m[31m([mptr [31m!=[m NULL[31m);[m
+10	    [01mexit[m[31m([m[35m0[m[31m);[m
+11	[31m}[m
+[?2004h(gdb) next
+[?2004l10	    [01mexit[m[31m([m[35m0[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) quit
+[?2004l[?2004hA debugging session is active.
+
+	Inferior 1 [process 2109622] will be killed.
+
+Quit anyway? (y or n) y
+[?2004l[?2004h[shivani@vm-instunix-09] (2)$ exit
+[?2004lexit
+
+Script done on 2024-10-16 17:06
